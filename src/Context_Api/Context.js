@@ -18,6 +18,7 @@ export function ProductsProvider({ children }) {
         })
         .catch(console.error);
     };
+
     fetchProducts();
 
     const fetchImages = async () => {
@@ -29,7 +30,11 @@ export function ProductsProvider({ children }) {
         })
         .catch(console.error);
     };
-    fetchImages();
+    setInterval(() => {
+      fetchImages();
+      console.log("done");
+    }, 5000);
+    // fetchImages();
   }, []);
 
   return (
