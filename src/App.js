@@ -7,12 +7,8 @@ import Products from "./Components/Products";
 import { ProductsProvider } from "./Context_Api/Context";
 import Slider from "./Components/Slider";
 import Subscribe from "./Components/Subscribe";
-import { useEffect } from "react";
 
 function App() {
-  useEffect(() => {
-    document.title = "Mobile Store";
-  }, []);
   return (
     <ProductsProvider>
       <Router>
