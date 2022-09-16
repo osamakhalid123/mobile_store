@@ -1,0 +1,93 @@
+.slide{
+    margin: 0 auto;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+position: relative;
+
+
+
+.slick-dots{
+
+    bottom: 5px;
+    display: flex !important;
+    border-radius: 25px;
+    background-color: white ;
+    width: fit-content;
+    justify-content: center ;
+    align-items: center;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    height: fit-content;
+    transform: translate(-50%, -50%);
+    @media only screen and (max-width: 785px) {
+        margin: -7px 0;
+    }
+
+
+    li{  
+button {
+ 
+    &:before{
+        font-size: 10px;
+        color: #D1D3D4;
+
+        @media only screen and (max-width: 785px) {
+            font-size: 6px;
+        }
+    }
+        
+}
+}
+}
+
+
+li.slick-active button:before {
+    color: rgb(167,169,172) !important;
+   
+}
+.slick-list {
+    overflow: visible;
+}
+.slick-next {
+
+    position: absolute;
+    right: 20vw;
+    @media only screen and (max-width: 785px) {
+        display: none !important;
+     }
+}
+.slick-prev {
+    position: absolute;
+    left:20vw;
+    @media only screen and (max-width: 785px) {
+        display: none !important;
+     }
+}
+button {
+  
+    z-index: 1;
+}
+
+    div{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        img{
+            width: 100%;
+            height: auto;
+            @media only screen and (max-width: 785px) {
+                min-height: 150px;
+            }
+           
+        
+        }
+    }
+
+}
+

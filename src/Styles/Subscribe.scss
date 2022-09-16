@@ -1,0 +1,51 @@
+.Subscribe_container{
+
+    background-color: rgb(240,240,240);
+    padding-bottom: 85px;
+    div{
+        h3{
+        text-align: center;
+        padding: 50px 0;
+        font-weight: 100;
+        @media only screen and (max-width: 785px) {
+            font-size: 16px;
+        }
+
+    }
+    }
+
+    div{
+        padding: 20px;
+        @media only screen and (max-width: 785px) {
+            padding: 0;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media only screen and (max-width: 785px) {
+                margin: 0 18px;
+
+            }
+            input{
+                padding: 10px 20px;
+                width: 400px;
+                height: 50px;
+                border-radius: 10px;
+                background-color: rgb(240, 240, 240);
+                border: 1px solid rgb(182, 182, 182);
+            }
+            button{
+                background-color: black;
+                color: white;
+                height: 50px;
+                border-radius: 7px;
+                margin-left: -10px;
+                width: 193px;
+            
+            }
+        }
+        
+    }
+    
+}

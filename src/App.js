@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
+import Footer from "./Components/Footer";
+import NavBar from "./Components/NavBar";
+import ProductDetails from "./Components/ProductDetails";
+import Products from "./Components/Products";
+import { ProductsProvider } from "./Context_Api/Context";
+import Slider from "./Components/Slider";
+import Subscribe from "./Components/Subscribe";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    document.title = "Mobile Store";
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ProductsProvider>
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Slider />
+                <Products />
+                <Subscribe />
+              </>
+            }
+          />
+
+          <Route path="/:productId" element={<ProductDetails />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </ProductsProvider>
   );
 }
 

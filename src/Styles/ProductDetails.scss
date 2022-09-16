@@ -1,0 +1,335 @@
+
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @mixin flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  
+  @mixin cusom-box {
+    padding: 20px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 5px;
+    border: 1px solid #c3c3c3;
+
+  }
+  
+
+.Details_container {
+    @include flex-row;
+
+  justify-content: center;
+  gap: 100px;
+  margin: 100px auto;
+  @media only screen and (max-width: 785px) {
+    flex-direction: column;
+    width: 90vw;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 100px auto;
+  }
+
+  .Left_Section {
+    @include flex-row;
+
+
+    @media only screen and (max-width: 785px) {
+      align-items: center;
+    }
+
+    .main_image {
+      img {
+        @media only screen and (max-width: 785px) {
+          width: 100%;
+        }
+      }
+    }
+    .side_images_container {
+
+        @include flex-column;
+      margin-right: 15px;
+
+      .side_images {
+  
+        width: 80px;
+        height: 80px;
+        @media only screen and (max-width: 785px) {
+          width: 100%;
+          height: 80px;
+        }
+      }
+    }
+  }
+
+  .Right_Section {
+    @include flex-column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .Block {
+        @include flex-row;
+
+
+      .Brand {
+        font-size: 14px;
+        color: #888888;
+      }
+      .Name {
+        font-size: 40px;
+      }
+      .Rating {
+        @include flex-row;
+
+        align-items: center;
+
+        .Reviews {
+          color: #aaaaaa;
+          font-size: 15px;
+          margin-left: 5px;
+        }
+      }
+      .PriceIn {
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 2px;
+        color: #0d4eb7;
+      }
+      .PriceOut {
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 2px;
+        color: Black;
+      }
+      .heart {
+        width: fit-content;
+        cursor: pointer;
+      }
+    }
+
+    .inStock {
+      color: #36ba5c;
+      font-size: 12px;
+    }
+    .outStock {
+      color: #d63030;
+      font-size: 12px;
+    }
+    .quantity {
+        @include flex-row;
+
+      align-items: center;
+      justify-content: flex-start;
+      margin: 5px 0;
+      .plus {
+        font-size: 30px;
+        background-color: transparent;
+        padding: 5px 13px;
+        border-radius: 50%;
+        margin-right: 5px;
+        border: 1px solid gray;
+        cursor: pointer;
+      }
+      .Qnumber {
+        font-size: 30px;
+      }
+      .minus {
+        font-size: 30px;
+        background-color: transparent;
+        padding: 5px 13px;
+        border-radius: 50%;
+        margin-left: 5px;
+        border: 1px solid gray;
+        cursor: pointer;
+      }
+    }
+    .Bay {
+        @include flex-row;
+
+      margin: 5px 0;
+      .fullPrice {
+        margin-right: 5px;
+        border: 1px solid #c3c3c3;
+        padding: 20px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .Installments {
+        @include cusom-box;
+
+        
+      }
+    }
+
+    .Bank {
+      margin: 5px 0;
+
+      img {
+        @include cusom-box;
+
+      }
+    }
+    .Memory {
+      margin: 5px 0;
+      @include flex-column;
+      h3 {
+        margin-bottom: 10px;
+      }
+      .options {
+        @include flex-row;
+
+        flex-wrap: wrap;
+
+        .option {
+            @include cusom-box;
+
+          margin-bottom: 5px;
+        }
+      }
+    }
+    .color {
+        @include flex-column;
+      margin: 5px 0;
+      h3 {
+        margin-bottom: 10px;
+      }
+      .colors {
+        @include flex-row;
+
+        .silver {
+          border: 1px solid #c3c3c3;
+          padding: 20px 30px;
+          border-radius: 10px;
+          cursor: pointer;
+          margin-right: 5px;
+          @include flex-column;
+
+          justify-content: center;
+          align-items: center;
+          
+
+          p {
+            margin-bottom: 5px;
+          }
+
+          span {
+            height: 40px;
+            width: 40px;
+            background-color: #ededed;
+            border-radius: 50%;
+            display: inline-block;
+            border: none;
+          }
+        }
+        .blue {
+            @include cusom-box;
+
+          @include flex-column;
+
+          justify-content: center;
+          align-items: center;
+       
+
+          p {
+            margin-bottom: 5px;
+          }
+
+          span {
+            height: 40px;
+            width: 40px;
+            background-color: #90bad1;
+            border-radius: 50%;
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .insurance {
+        @include flex-column;
+        margin-bottom: 5px;
+      h3 {
+        margin-bottom: 10px;
+      }
+
+      .years {
+        @include flex-row;
+
+        .one_year {
+            @include cusom-box;
+
+          p {
+            font-weight: bold;
+          }
+        }
+        .two_year {
+            @include cusom-box;
+
+          p {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .purchase {
+      margin: 5px 0;
+      display: flex;
+      .purchaseOut {
+        background-color: black;
+        color: white;
+        padding: 15px 0;
+        min-width: 340px;
+
+        font-size: 17px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .purchaseIn {
+        background-color: #0d4eb7;
+        color: white;
+        padding: 15px 0;
+        min-width: 340px;
+        font-size: 17px;
+        border-radius: 10px;
+        cursor: pointer;
+        border: none;
+      }
+    }
+    .line {
+      margin: 15px 0;
+      min-width: 340px;
+      display: inline;
+      background-color: #d8d8d8;
+      height: 2px;
+    }
+    .shipping,
+    .return {
+        @include flex-row;
+
+      margin: 10px 0;
+      img {
+        margin-right: 5px;
+      }
+      p {
+        color: #6f6f6f;
+      }
+    }
+
+    @media only screen and (max-width: 785px) {
+      font-size: 15px;
+    }
+  }
+
+
+}
+.Slider_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

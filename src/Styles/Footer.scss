@@ -1,0 +1,30 @@
+.Footer_Container{
+    background-color: black;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .section_one{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 50vw;
+        text-align: center;
+        margin: 30px auto;
+        @media only screen and (max-width: 785px) {
+            width: 100%;
+        }
+    }
+
+    .section_two{
+        color: white;
+        text-align: center;
+        p{
+            margin: 15px 0;
+            @media only screen and (max-width: 785px) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+}
