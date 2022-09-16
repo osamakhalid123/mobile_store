@@ -30,11 +30,8 @@ export function ProductsProvider({ children }) {
         })
         .catch(console.error);
     };
-    setInterval(() => {
-      fetchImages();
-      console.log("done");
-    }, 5000);
-    // fetchImages();
+
+    fetchImages();
   }, []);
 
   return (
