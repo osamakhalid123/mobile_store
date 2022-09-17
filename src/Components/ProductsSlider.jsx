@@ -52,7 +52,7 @@ function ProductsSlider() {
               {product.inStock > 0 ? (
                 <p className="inStock">In Stock </p>
               ) : (
-                <p className="outStock">Out Stock </p>
+                <p className="outStock">Out of Stock </p>
               )}
             </div>
           </div>
