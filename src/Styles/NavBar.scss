@@ -5,9 +5,6 @@
     align-items: center;
     justify-content: space-around;
     padding: 5px 0px;
-    @media only screen and (max-width: 785px) {
-       width: 100vw;
-            }
 
             @media only screen and (max-width: 888px)and (min-width: 786px) {
                .logo{
@@ -17,10 +14,17 @@
                }
             }
 
+            @media only screen and (max-width: 785px) {
+               .logo{
+                margin-left: 20px;
+               }
+                    } 
+
     .mobile_nav_menu{
         display: none;
         @media only screen and (max-width: 785px) {
            display: block;
+           margin-right: 20px;
                }
     }
     .nav_items{
@@ -71,7 +75,7 @@
         color: white;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         padding: 5px 0px;
         .nav_items{
             display: none;
@@ -92,6 +96,7 @@
         flex-direction: column;
         align-items: center;
 z-index: 10;
+width: 100vw;
 
         }
         li{
